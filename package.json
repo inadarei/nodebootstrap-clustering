@@ -1,5 +1,5 @@
 { "name" : "nodebootstrap-clustering"
-    , "version"     : "0.1.0"
+    , "version"     : "1.0.0"
     , "description" : "Clustering Component of NodeBootstrap"
     , "author"      : "Irakli Nadareishvili"
     , "license" : {
@@ -19,8 +19,7 @@
       , "metalogger"         : "*"
 }
     , "devDependencies" : {
-        "assert" : "*"
-      , "should" : "*"
+        "should" : "*"
       , "mocha"  : "*"
 }
     , "scripts": {
