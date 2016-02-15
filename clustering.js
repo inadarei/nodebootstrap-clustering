@@ -1,5 +1,5 @@
 var cluster = require('cluster')
-    , _     = require('underscore')
+    , _     = require('lodash')
     , log   = require('metalogger')();
 
 exports = module.exports;

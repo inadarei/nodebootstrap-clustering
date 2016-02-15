@@ -1,31 +1,22 @@
 {
   "name": "nodebootstrap-clustering",
-  "version": "1.0.1",
+  "version": "1.1.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "description": "Clustering Component of NodeBootstrap",
   "author": "Irakli Nadareishvili",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/inadarei/nodebootstrap/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "main": "clustering.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/inadarei/nodebootstrap-clustering"
   },
   "engines": {
-    "node": ">=0.8.8"
+    "node": ">=0.10"
   },
   "dependencies": {
-    "metalogger": "^1.0.1",
-    "mocha": "^2.3.3",
-    "should": "^7.1.1",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
-    "should": "*",
-    "mocha": "*"
-  },
-  "scripts": {
-    "test": "mocha"
+    "lodash": "^4.3.0",
+    "metalogger": "^1.0.1"
   }
 }
