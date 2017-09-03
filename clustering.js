@@ -22,7 +22,16 @@ exports.setup = function() {
   });
 
   cluster.on('listening', function onClusterListening(worker, address) {
-    log.notice('Worker #' + worker.id + ' listening on port: ' + address.port + ' ' + address.addressType);
+    // from cluster doc
+    var type_normalize = {
+      '-1':   'unix domain socket',
+      '4':    'TCPv4',
+      '6':    'TCPv6',
+      'udp4': 'UDPv4',
+      'udp6': 'UDPv6'
+    };
+
+    log.notice('Worker #' + worker.id + ' listening on port: ' + address.port + ' ' + type_normalize[address.addressType]);
     clearTimeout(timeouts[worker.id]);
   });
 
