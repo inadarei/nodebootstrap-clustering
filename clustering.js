@@ -22,7 +22,7 @@ exports.setup = function() {
   });
 
   cluster.on('listening', function onClusterListening(worker, address) {
-    log.notice('Worker #' + worker.id + ' listening on port: ' + address.port);
+    log.notice('Worker #' + worker.id + ' listening on port: ' + address.port + ' ' + address.addressType);
     clearTimeout(timeouts[worker.id]);
   });
 
