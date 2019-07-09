@@ -17,6 +17,12 @@
   },
   "dependencies": {
     "lodash": "^4.6.1",
-    "metalogger": "^1.3.0"
-  }
+    "metalogger": "^1.3.0",
+    "snyk": "^1.192.4"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
