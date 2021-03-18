@@ -16,7 +16,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash.foreach": "^4.5.0",
     "metalogger": "^2.2.1"
   }
 }
