@@ -1,5 +1,5 @@
 var cluster = require('cluster')
-    , _     = require('lodash')
+    , each  = require('lodash.foreach')
     , log   = require('metalogger')();
 
 exports = module.exports;
@@ -48,9 +48,9 @@ exports.setup = function() {
   // to make cluster and supervisor play nicely together:
   if (process.env.NODE_HOT_RELOAD == 1) {
     var signals = ['SIGINT', 'SIGTERM', 'SIGQUIT'];
-    _.each(signals, function forEachQuitSignal(signal){
+    each(signals, function forEachQuitSignal(signal){
       process.on(signal, function onQuitSignals(){
-        _.each(cluster.workers, function destroyWorker(worker){
+        each(cluster.workers, function destroyWorker(worker){
           worker.destroy();
         });
       });
